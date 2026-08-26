@@ -69,7 +69,22 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
-      - run: python -m unittest discover -s tests -t . -v
+      # test_placeholder_integrity asserts the pristine template's sentinels -
+      # true only for the unpersonalized upstream repo, same as the dedicated
+      # placeholder-integrity job below. Run everything else unconditionally,
+      # then that one module only on upstream, so forks stay green post-/setup.
+      - name: Run test suite (excluding upstream-only placeholder checks)
+        run: |
+          MODULES=$(python -c "
+          import pkgutil
+          for _, name, _ in pkgutil.iter_modules(['tests']):
+              if name != 'test_placeholder_integrity':
+                  print(f'tests.{name}')
+          ")
+          python -m unittest -v $MODULES
+      - name: Run placeholder integrity tests (upstream template only)
+        if: github.repository == 'MadsLorentzen/ai-job-search'
+        run: python -m unittest -v tests.test_placeholder_integrity
 
   dependency-review:
     name: Dependency review
