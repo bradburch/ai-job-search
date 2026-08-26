@@ -44,9 +44,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** TypeScript/JavaScript, React, Node.js/Hono, Cloudflare Workers, LLM/agentic engineering (Claude, MCP, Vercel AI SDK), OAuth/auth (OAuth 2.1 + PKCE, JWT, SAML), customer-facing integration work
+**Moderate match areas:** Python/Django, Go, Java/Scala/JVM (Spring, Play), AWS (DynamoDB, SQS), SQL databases (PostgreSQL, MSSQL)
+**Weak match areas:** Deep ML/data science (model training/research), native mobile development - not present in background, flag as gaps if a posting leans heavily on either
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -58,9 +58,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Forward Deployed Engineer and Software Engineer roles on an established team - full-stack/backend ownership plus direct customer or stakeholder contact (Pawservation, Total Brain)
+**Moderate:** Pure backend/platform SWE roles without customer-facing scope (Salesforce, Front)
+**Entry-level:** N/A - 7+ years of professional experience
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -75,10 +75,12 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+- Remote (US-based) or hybrid anywhere in the SF Bay Area: PASS (ideal)
+- On-site within San Francisco city proper: PASS (acceptable)
+- On-site elsewhere in the greater Bay Area (Oakland, Peninsula, South Bay, East Bay): FLAG (borderline, discuss with user)
+- On-site outside the Bay Area with no remote option, or requires relocation: FAIL (deal-breaker)
+- Base salary below $180k with no indication it's negotiable: FLAG (discuss with user before drafting)
+- Company funding stage pre-seed/seed/Series A: FLAG — these roles tend to be "founding engineer" shaped, which is explicitly out of scope. Verify actual scope before treating as a fail.
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -91,19 +93,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Join an established engineering team - not another founding/0-to-1 solo role
+- Product Engineer and Software Engineer (top priority), Member of Technical Staff and Forward Deployed Engineer (still accepted, lower priority), and variations on those titles (Solutions Engineer dropped as a target - "SE was a dead end")
+- Roles that keep engineering work in front of customers: discovery, integration scoping, POC-to-production delivery
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: End-to-end ownership of a system; direct customer/stakeholder contact; scoping and shipping integrations
+- Tasks that drain: [Not yet captured]
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: [Not yet captured - ask if relevant]
+- **Flexibility**: San Francisco based, on-site or hybrid; open to occasional travel for customer work
+- **Professional development**: [Not yet captured]
 
 ### 6. Salary Benchmark (Optional)
 

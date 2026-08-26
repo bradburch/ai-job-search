@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Brad Burch
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Brad Burch, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,70 +10,72 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **Name:** Brad Burch
+- **Location:** San Francisco, CA (SF Bay Area; hybrid/remote preferred, on-site OK within San Francisco city). Also open to on-site/hybrid roles in Indianapolis, Chicago, Indiana, and Michigan.
+- **Languages:** English (Native or Bilingual)
+- **CV language:** English
+- **EEO / application questions:** US citizen; not a veteran; no disability.
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Currently self-employed (Founder & Software Engineer, Pawservation). Actively looking to join an established engineering team - not seeking another founding/0-to-1 role.
+- **LinkedIn headline:** "SF Engineer who ships end-to-end and sits with customers | Software Engineer | Forward Deployed Engineer | Solutions Engineer | LLM agents + MCP servers | TypeScript / Python / Go" *(headline still lists Solutions Engineer, which remains dropped as a target - "SE was a dead end"; see Target Sectors for the current title list)*
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Bachelor of Arts in Computer Science** (2013-2017) - DePauw University
+  - Topics: Core CS coursework
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Founder & Software Engineer** (Sept 2022 - Present) - **Pawservation** (San Francisco, CA)
+  - Built and operate a production Claude AI agent and OAuth 2.1 + PKCE MCP server for a live SF pet-care business (30+ active clients, 60+ bookings/month)
+  - Own the full lifecycle solo: client discovery, system design, Cloudflare Workers/D1/KV/R2 architecture, security hardening, on-call
+  - Extracted and open-sourced two components: Pawservation and mcp-auth-kit
+- **Software Engineer** (May 2022 - Sept 2022) - **Front** (San Francisco, CA; role eliminated in company-wide layoff)
+  - Shipped a Node.js REST API for account-level email rules, driving a 30% adoption increase
+- **Software Engineer** (May 2019 - Sept 2021) - **Total Brain** (San Francisco, CA)
+  - Engineering point of contact on enterprise Customer Success/Sales calls; cut enterprise onboarding from 2+ weeks to ~3 days
+  - Migrated MSSQL to DynamoDB, cutting API response times 50%
+- **Software Engineer** (Jul 2017 - Aug 2018) - **Salesforce.com** (San Francisco, CA)
+  - Built a Spring-based OAuth2 security filter and a React admin UI that cut internal test setup time 40%
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** TypeScript, JavaScript, React, Node.js/Hono, Cloudflare Workers, Claude/LLM agentic engineering, Model Context Protocol (MCP)
+- **Secondary:** Python (Django), Go, Java (Spring), Scala (Play), SQL, AWS (DynamoDB, SQS)
+- **Domain:** Customer-facing/forward-deployed engineering, OAuth/auth security (OAuth 2.1 + PKCE, JWT, SAML), production operations
+- **Software:** Cloudflare (Workers, D1, KV, R2, Workflows), PostgreSQL, MSSQL, Docker, Linux, Git, GitHub Actions, Vitest, Playwright, Jenkins
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Essentials for Solution Engineers**
+- **Creative Problem Solving for Technologists**
+- **What Is Generative AI?**
+- **Hands-On AI: Building AI Agents with Model Context Protocol (MCP) and Agent2Agent (A2A)**
+- **Generative AI: The Evolution of Thoughtful Online Search**
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None currently.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Dean's List - DePauw University (multiple semesters)
+- Computer Science Department Honor Society - DePauw University
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Operator-engineer** - owns problems end-to-end, from customer discovery through design, build, ship, and on-call support
+- **Customer-facing by choice** - seeks roles with direct customer or stakeholder contact, not purely back-office engineering
+- **Strengths:** End-to-end ownership, customer-facing technical communication, proactive security mindset
+- **Growth areas:** Not yet captured - revisit after a few interview cycles
+- **Thrives in:** An established team with existing infrastructure and colleagues, direct customer contact, and full-lifecycle ownership of a problem
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Owning a system end-to-end: customer discovery through design, build, ship, and on-call support
+- Building and shipping LLM/agentic products (Claude, MCP) into real production use
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Enterprise / B2B SaaS, Series B through enterprise/public: Product Engineer and Software Engineer (top priority), Member of Technical Staff and Forward Deployed Engineer (still accepted, lower priority), and variations on those titles
+- AI/LLM tooling companies: agentic products, MCP servers, developer tooling
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Founding/0-to-1 solo engineering roles (already ran one solo for 3+ years; actively looking to join an established team)
+- Base salary below $180k
+- On-site roles outside the SF Bay Area, Indianapolis, Chicago, Indiana, or Michigan with no remote option, or requiring relocation elsewhere
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
@@ -87,7 +86,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 ## Workflow for New Job Applications
 1. User provides a job posting (URL or text)
 2. **Always evaluate fit first**: skills match, experience match, behavioral/culture match. Present this assessment to the user before proceeding.
-3. If good fit: create targeted CV (`cv/main_<company>_<role>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
+3. If good fit: create targeted CV (`cv/Brad Burch Resume - <Company>.tex`) and cover letter (`cover_letters/Brad Burch Cover Letter - <Company>.tex`)
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 

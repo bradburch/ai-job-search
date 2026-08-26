@@ -39,6 +39,58 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+
+### Production Claude agent + OAuth 2.1 MCP server (Pawservation)
+**Source:** CV / LinkedIn - Founder & Software Engineer, Pawservation
+**What happened:** Built and operate a production AI chat agent (Claude Haiku 4.5, 15 tools) with layered cost controls, plus a standards-compliant OAuth 2.1 + PKCE MCP server exposing the same tools to external AI agents.
+**Why it matters:** Answers questions about shipping LLM/agentic features safely to production, and about AI security/cost-control design.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Cloudflare Workflows calendar-backfill re-architecture (Pawservation)
+**Source:** CV - Founder & Software Engineer, Pawservation
+**What happened:** A calendar backfill exceeded Workers execution limits; re-architected it as durable Workflow fan-out/fan-in chunks with exactly-once finalization and silent-failure alerting.
+**Why it matters:** Answers questions about debugging production reliability issues and redesigning under a platform constraint.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### MSSQL to DynamoDB migration (Total Brain)
+**Source:** CV / LinkedIn - Software Engineer, Total Brain
+**What happened:** Migrated the primary datastore from legacy MSSQL to DynamoDB on a redesigned NoSQL schema, cutting API response times 50%; added an in-memory caching layer that raised read throughput 50%.
+**Why it matters:** Answers questions about data migration, schema redesign, and performance optimization.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Security self-audit and production hardening (Pawservation)
+**Source:** CV / LinkedIn - Founder & Software Engineer, Pawservation
+**What happened:** Published a public AI security self-audit (prompt injection, tool scoping, auth boundaries) and hardened production against real attack classes: revocable server-side sessions, SPF/DKIM-verified payment ingestion, RFC 5987 filename encoding.
+**Why it matters:** Answers questions about security mindset, threat modeling, and proactive (not just reactive) engineering practice.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Enterprise CS/Sales technical point of contact (Total Brain)
+**Source:** CV / LinkedIn - Software Engineer, Total Brain
+**What happened:** Was the engineering point of contact on Customer Success and Sales calls for enterprise accounts: scoped integrations live, demoed to technical and business stakeholders, cut enterprise onboarding from 2+ weeks to ~3 days.
+**Why it matters:** Answers questions about customer-facing technical communication - central to FDE/Solutions-adjacent roles.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

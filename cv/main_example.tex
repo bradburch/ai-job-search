@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Brad Burch
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -24,18 +23,19 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Brad Burch - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+\usepackage{needspace}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Brad}{Burch}
+\address{San Francisco, CA}{}{}
+\phone[mobile]{(574) 835-6870}
+\email{bradburch.jobs@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/burchbrad}{LinkedIn}, \href{https://github.com/bradburch}{GitHub}, \href{https://bradburch.github.io}{Portfolio}}
 
 \begin{document}
 
@@ -46,7 +46,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Software engineer with 7 years building and shipping production full-stack systems and LLM agents (Claude, MCP, OAuth 2.1 + PKCE), backed by a CI-gated Vitest + Playwright suite and automated deploys. Recent work runs on Cloudflare's edge stack (Workers, D1, KV, R2) with TypeScript on Hono and React 19. Owns systems from schema design through ship and on-call.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +56,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Languages}: TypeScript, JavaScript, Python, Go, Java, Scala, SQL
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Frameworks \& Runtimes}: React 19, React Router 7, Node.js, Hono, Spring, Play, Cloudflare Workers
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Infrastructure}: Cloudflare (Workers, D1, KV, R2, Workflows), AWS (DynamoDB, SQS), PostgreSQL, MSSQL, SQLite, Docker, Linux
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{AI / LLM}: Claude (Haiku 4.5, Sonnet), Vercel AI SDK, Model Context Protocol (MCP), agentic tool loops, streaming SSE, AI-assisted development (Claude Code, Cursor)
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Auth \& Security}: OAuth 2.0/2.1, PKCE (RFC 7636), JWT (HS256), SAML 2.0, refresh token rotation, CSRF/XSS hardening
+
+\item \textbf{Testing \& Delivery}: Git, Vitest, Playwright, GitHub Actions, CI/CD, Jenkins, structured logging, production monitoring \& alerting
 
 \end{itemize}
 
@@ -77,31 +79,45 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2022--Present}{Founder \& Software Engineer}{Pawservation}{San Francisco, CA (pawservation.com)}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Owned the full product loop end-to-end for a real SF pet-care business (30+ active clients, 60+ bookings/month, 30+ invoices/month): discovery, system design, implementation, deploy, and support as sole engineer.
+    \item Built and operate a production Claude Haiku 4.5 chat agent (15 tools, Vercel AI SDK v6) with layered cost controls: rate limits, token budgets, a circuit breaker, and hard per-user/global USD caps.
+    \item Built a standards-compliant OAuth 2.1 + PKCE MCP server exposing the same tool surface to external AI agents.
+    \item Designed and built a TypeScript monorepo on Cloudflare Workers (React 19, Hono, a 23-table D1 schema, KV, R2, Workflows) with no origin server.
+    \item Hardened production against real attack classes: revocable server-side sessions, SPF/DKIM-verified payment ingestion, RFC 5987 filename encoding.
+    \item Extracted and open-sourced two components: Pawservation (multi-tenant booking widget) and mcp-auth-kit (OAuth 2.1 + PKCE MCP server kit).
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2022}{Software Engineer}{Front}{San Francisco, CA}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Shipped a Node.js REST API enabling account-level email rules for multi-domain enterprise customers, previously configurable only per-inbox, driving a 30\% increase in adoption.
+    \item Performed a security upgrade on the core JavaScript email library responsible for 200K+ outbound messages/month.
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{8\baselineskip}
+\item{\cventry{2019--2021}{Software Engineer}{Total Brain}{San Francisco, CA}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Engineering point of contact on enterprise Customer Success and Sales calls: scoped integrations live, demoed to stakeholders, cut enterprise onboarding from 2+ weeks to ~3 days.
+    \item Migrated user data from MSSQL to DynamoDB with a redesigned NoSQL schema, cutting API response times 50\%; added an in-memory caching layer in front of it to relieve hot read paths.
+    \item Designed a Scala backend integration for Apple, Google, and Facebook authentication, contributing to a 60\% lift in sign-ups.
+    \item Standardized SAML 2.0 and JWT for enterprise SSO, and built the Jenkins CI/CD pipeline with bash-based release automation.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\item{\cventry{2017--2018}{Software Engineer}{Salesforce.com}{San Francisco, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built and maintained Spring-based automated testing frameworks on a developer-productivity team, including a persistent test-state repository in Java, Spring, PostgreSQL, and EclipseLink.
+    \item Built a Spring-based OAuth2 security filter for microservice API access control with remote identity validation, plus a React management UI that cut internal test setup time 40\%.
+    \item Led delivery of a config builder and validator used by internal teams, coordinating partner teams to ship on schedule.
 \end{itemize}}}
 
 \end{itemize}
@@ -114,15 +130,7 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2013--2017}{Bachelor of Arts, Computer Science}{DePauw University}{}{}{}}
 
 \end{itemize}
 
@@ -133,27 +141,18 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item English (native/bilingual).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{Dean's List} -- DePauw University (multiple semesters).}
+\item{\textbf{Computer Science Department Honor Society} -- DePauw University.}
 \end{itemize}
 
 % ============================================================
