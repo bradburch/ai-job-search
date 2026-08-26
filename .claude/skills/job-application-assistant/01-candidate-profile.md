@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.0
+framework_version: 1.1.1
 ---
 
 # Candidate Profile
@@ -11,10 +11,19 @@ framework_version: 1.0.0
 - **Email:** bradburch.jobs@gmail.com
 - **LinkedIn:** linkedin.com/in/burchbrad
 - **GitHub:** github.com/bradburch (portfolio: bradburch.github.io)
-- **Languages:** English (Native or Bilingual)
 - **Status:** Currently self-employed (Founder & Software Engineer, Pawservation). Actively looking to join an established engineering team — not seeking founding/0-to-1 solo roles.
 - **Constraints:** San Francisco based; on-site or hybrid; open to occasional travel for customer-facing work.
 - **EEO / application questions:** US citizen; not a veteran; no disability.
+
+### Languages
+<!-- Every language you can work in professionally, with your honest level. Used by the
+Language Gate in 04-job-evaluation.md and by job-scraper/search-queries.md's query-language
+generation. Omit any language you don't actually work in - an undeclared language is treated as
+a hard no, not a gap to smooth over. -->
+
+| Language | Level | Notes |
+|----------|-------|-------|
+| English | Native or Bilingual | |
 
 ## Education
 

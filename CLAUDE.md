@@ -13,7 +13,15 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 ### Identity
 - **Name:** Brad Burch
 - **Location:** San Francisco, CA (SF Bay Area; hybrid/remote preferred, on-site OK within San Francisco city). Also open to on-site/hybrid roles in Indianapolis, Chicago, Indiana, and Michigan.
-- **Languages:** English (Native or Bilingual)
+- **Languages:**
+  | Language | Level |
+  |----------|-------|
+  | English | Native or Bilingual |
+  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
+  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
+  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
+  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
+  04-job-evaluation.md's Language Gate. -->
 - **CV language:** English
 - **EEO / application questions:** US citizen; not a veteran; no disability.
 
@@ -73,6 +81,8 @@ None currently.
 - AI/LLM tooling companies: agentic products, MCP servers, developer tooling
 
 ### Deal-breakers
+<!-- Hard constraints on job search. Language requirements are handled separately and
+automatically from your Languages table above - don't duplicate them here. -->
 - Founding/0-to-1 solo engineering roles (already ran one solo for 3+ years; actively looking to join an established team)
 - Base salary below $180k
 - On-site roles outside the SF Bay Area, Indianapolis, Chicago, Indiana, or Michigan with no remote option, or requiring relocation elsewhere
@@ -86,7 +96,7 @@ None currently.
 ## Workflow for New Job Applications
 1. User provides a job posting (URL or text)
 2. **Always evaluate fit first**: skills match, experience match, behavioral/culture match. Present this assessment to the user before proceeding.
-3. If good fit: create targeted CV (`cv/Brad Burch Resume - <Company>.tex`) and cover letter (`cover_letters/Brad Burch Cover Letter - <Company>.tex`)
+3. If good fit: create targeted CV (`cv/Brad Burch Resume - <Company> - <Role>.tex`) and cover letter (`cover_letters/Brad Burch Cover Letter - <Company> - <Role>.tex`)
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 
@@ -130,7 +140,7 @@ Both documents MUST be compiled and visually inspected via the Read tool on the 
 - [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
 
 ### ATS & keyword verification (CV)
-ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `pdftotext -layout` and verify what a parser sees. `pdftotext` (poppler) is optional - if missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
+ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `pdftotext -layout -enc UTF-8` and verify what a parser sees. `pdftotext` (poppler) is optional - if missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
 - [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but absent from the extraction
 - [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to ATS)
 - [ ] Reading order of the extracted text matches the visual order (single-column stock template is safe; multi-column custom templates are where this breaks)

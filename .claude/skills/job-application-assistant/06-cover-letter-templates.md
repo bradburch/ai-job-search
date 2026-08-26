@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.1
+framework_version: 1.0.2
 ---
 
 # Cover Letter Templates and Tailoring Guide
@@ -8,23 +8,23 @@ framework_version: 1.0.1
 
 Cover letters use a custom LaTeX document class (`cover.cls`) with Lato/Raleway fonts.
 
-**Output file:** `cover_letters/Brad Burch Cover Letter - <Company>.tex`
+**Output file:** `cover_letters/Brad Burch Cover Letter - <Company> - <Role>.tex`
 **Compile with:** XeLaTeX (cover.cls requires fontspec)
 **Font directory:** `cover_letters/OpenFonts/fonts/`
 
 ### Compile command
 
 ```bash
-cd cover_letters && xelatex -interaction=nonstopmode "Brad Burch Cover Letter - <Company>.tex"
+cd cover_letters && xelatex -interaction=nonstopmode "Brad Burch Cover Letter - <Company> - <Role>.tex"
 ```
 
-Expected output: `Output written on Brad Burch Cover Letter - <Company>.pdf (1 page, ...)`. Any page count other than 1 is a failure that must be fixed before presenting to the user.
+Expected output: `Output written on Brad Burch Cover Letter - <Company> - <Role>.pdf (1 page, ...)`. Any page count other than 1 is a failure that must be fixed before presenting to the user.
 
 ## Compile-and-Inspect Loop (MANDATORY)
 
 After writing the cover letter and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean:
 
-1. Run `xelatex -interaction=nonstopmode "Brad Burch Cover Letter - <Company>.tex"`
+1. Run `xelatex -interaction=nonstopmode "Brad Burch Cover Letter - <Company> - <Role>.tex"`
 2. Confirm page count is exactly 1 and compile succeeded
 3. Read the PDF via the Read tool and visually check: signature fits at the bottom, no text cut off, bullet font matches body
 
@@ -92,9 +92,9 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 
 {\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
 \begin{itemize}
-    \item [Concrete achievement/skill 1]
-    \item [Concrete achievement/skill 2]
-    \item [Concrete achievement/skill 3]
+    \item {[Concrete achievement/skill 1]}
+    \item {[Concrete achievement/skill 2]}
+    \item {[Concrete achievement/skill 3]}
 \end{itemize}\par}
 
 \lettercontent{[Connection to company - why this role, why this company specifically]}
@@ -146,10 +146,14 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 - 3-5 bullets is ideal
 - Start each bullet with bold label or action verb
 - Use `\textbf{Label:}` for category-style bullets
+- A bullet whose text begins with a literal `[` must be braced: `\item {[text]}`. Unbraced, LaTeX parses `[text]` as `\item`'s optional label and renders it off the left page edge, missing from the PDF text layer entirely
 
 ### LaTeX Special Characters
-- Underscore: `\_`
-- Ampersand: `\&`
+Escape these wherever they appear in body text:
+- Ampersand: `\&` (company names: Brüel \& Kjær, H\&M) - unescaped, the compile fails loudly
+- Percent: `\%` ("grew revenue 30\%") - unescaped, it does **not** fail: everything after the `%` on that line is silently eaten as a LaTeX comment
+- Dollar: `\$`, hash: `\#`, underscore: `\_`
+- Tilde: `\textasciitilde{}`, caret: `\textasciicircum{}`, backslash: `\textbackslash{}`
 
 ### Non-English Cover Letters
 - Same template structure, just write content in the posting's language
